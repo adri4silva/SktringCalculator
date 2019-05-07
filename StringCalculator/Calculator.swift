@@ -8,12 +8,23 @@
 
 import Foundation
 
+enum CalculatorError: Error {
+    case negativeError
+}
+
 struct Calculator {
     
-    func add(numbers: String) -> Int {
+    func add(numbers: String) throws -> Int {
         let integers = numbers
             .components(separatedBy: CharacterSet(arrayLiteral: ",", "\n"))
             .compactMap { Int($0) }
+        
+        let negativeIntegers = integers
+            .filter { $0 < 0 }
+        
+        if !negativeIntegers.isEmpty {
+            throw CalculatorError.negativeError
+        }
         
         if integers.isEmpty {
             return 0

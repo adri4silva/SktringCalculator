@@ -18,32 +18,37 @@ class StringCalculatorTests: XCTestCase {
     }
 
     func test_GivenACalculator_WhenAnEmptyStringIsPassed_ThenTheSumIsZero() {
-        let result = calculator.add(numbers: "")
+        let result = try! calculator.add(numbers: "")
         
         XCTAssertEqual(result, 0)
     }
     
     func test_GivenACalculator_WhenWePassOneNumber_ThenTheSumIsTheSameNumber() {
-        let result = calculator.add(numbers: "1")
+        let result = try! calculator.add(numbers: "1")
         
         XCTAssertEqual(result, 1)
     }
     
     func test_GivenACalculator_WhenWePassMoreThanOneNumberAndLessThan4_ThenTheSumIsTheTotalResult() {
-        let result = calculator.add(numbers: "1,-3,4")
+        let result = try! calculator.add(numbers: "1,3,4")
         
-        XCTAssertEqual(result, 2)
+        XCTAssertEqual(result, 8)
     }
     
     func test_GivenACalculator_WhenWePassMoreThanOneNumber_ThenTheSumIsTheTotalResult() {
-        let result = calculator.add(numbers: "1,4,5,6,7,89,2")
+        let result = try! calculator.add(numbers: "1,4,5,6,7,89,2")
         
         XCTAssertEqual(result, 114)
     }
     
     func test_GivenACalculator_WhenWePassCharactersBetweenLines_ThenTheSumIsTheTotalResult() {
-        let result = calculator.add(numbers: "1\n\n4,5,6,7\n89,,,2")
+        let result = try! calculator.add(numbers: "1\n\n4,5,6,7\n89,,,2")
         
         XCTAssertEqual(result, 114)
+    }
+    
+    func test_GivenACalculator_WhenWePassANegativeNumber_ThenAExceptionIsThrown() {
+        
+        XCTAssertThrowsError(try calculator.add(numbers: "1\n\n-4,5,6,7\n89,,,2"))
     }
 }
