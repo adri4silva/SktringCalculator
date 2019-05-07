@@ -11,8 +11,9 @@
 		20A7C6852281892D001208D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7C6842281892D001208D0 /* ViewController.swift */; };
 		20A7C6882281892D001208D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A7C6862281892D001208D0 /* Main.storyboard */; };
 		20A7C68A2281892F001208D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A7C6892281892F001208D0 /* Assets.xcassets */; };
-		20A7C68D2281892F001208D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A7C68B2281892F001208D0 /* LaunchScreen.storyboard */; };
 		20A7C6982281892F001208D0 /* StringCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7C6972281892F001208D0 /* StringCalculatorTests.swift */; };
+		20A7C6A32281939F001208D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20A7C6A22281939F001208D0 /* LaunchScreen.storyboard */; };
+		20A7C6A522819712001208D0 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A7C6A422819712001208D0 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,11 +32,12 @@
 		20A7C6842281892D001208D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20A7C6872281892D001208D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20A7C6892281892F001208D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		20A7C68C2281892F001208D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20A7C68E2281892F001208D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A7C6932281892F001208D0 /* StringCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A7C6972281892F001208D0 /* StringCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTests.swift; sourceTree = "<group>"; };
 		20A7C6992281892F001208D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20A7C6A22281939F001208D0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20A7C6A422819712001208D0 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +83,9 @@
 				20A7C6842281892D001208D0 /* ViewController.swift */,
 				20A7C6862281892D001208D0 /* Main.storyboard */,
 				20A7C6892281892F001208D0 /* Assets.xcassets */,
-				20A7C68B2281892F001208D0 /* LaunchScreen.storyboard */,
 				20A7C68E2281892F001208D0 /* Info.plist */,
+				20A7C6A22281939F001208D0 /* LaunchScreen.storyboard */,
+				20A7C6A422819712001208D0 /* Calculator.swift */,
 			);
 			path = StringCalculator;
 			sourceTree = "<group>";
@@ -177,7 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20A7C68D2281892F001208D0 /* LaunchScreen.storyboard in Resources */,
+				20A7C6A32281939F001208D0 /* LaunchScreen.storyboard in Resources */,
 				20A7C68A2281892F001208D0 /* Assets.xcassets in Resources */,
 				20A7C6882281892D001208D0 /* Main.storyboard in Resources */,
 			);
@@ -199,6 +202,7 @@
 			files = (
 				20A7C6852281892D001208D0 /* ViewController.swift in Sources */,
 				20A7C6832281892D001208D0 /* AppDelegate.swift in Sources */,
+				20A7C6A522819712001208D0 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,14 +231,6 @@
 				20A7C6872281892D001208D0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		20A7C68B2281892F001208D0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				20A7C68C2281892F001208D0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

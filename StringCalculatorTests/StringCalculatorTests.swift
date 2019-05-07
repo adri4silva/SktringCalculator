@@ -10,25 +10,40 @@ import XCTest
 @testable import StringCalculator
 
 class StringCalculatorTests: XCTestCase {
+    
+    var calculator: Calculator!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        calculator = Calculator()
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_GivenACalculator_WhenAnEmptyStringIsPassed_ThenTheSumIsZero() {
+        let result = calculator.add(numbers: "")
+        
+        XCTAssertEqual(result, 0)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func test_GivenACalculator_WhenWePassOneNumber_ThenTheSumIsTheSameNumber() {
+        let result = calculator.add(numbers: "1")
+        
+        XCTAssertEqual(result, 1)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_GivenACalculator_WhenWePassMoreThanOneNumberAndLessThan4_ThenTheSumIsTheTotalResult() {
+        let result = calculator.add(numbers: "1,-3,4")
+        
+        XCTAssertEqual(result, 2)
     }
-
+    
+    func test_GivenACalculator_WhenWePassMoreThanOneNumber_ThenTheSumIsTheTotalResult() {
+        let result = calculator.add(numbers: "1,4,5,6,7,89,2")
+        
+        XCTAssertEqual(result, 114)
+    }
+    
+    func test_GivenACalculator_WhenWePassCharactersBetweenLines_ThenTheSumIsTheTotalResult() {
+        let result = calculator.add(numbers: "1\n\n4,5,6,7\n89,,,2")
+        
+        XCTAssertEqual(result, 114)
+    }
 }
